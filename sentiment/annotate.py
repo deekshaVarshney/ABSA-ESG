@@ -107,8 +107,8 @@ def sentiment_annotation(csv_files):
 
 # List of CSV files to process
 csv_files = [
-    '/Data/deeksha/concept_parser/data/tweets/aspect_filtered_tweets.csv',
-    '/Data/deeksha/concept_parser/data/news/aspect_filtered_sentences.csv'
+    '/Data/deeksha/concept_parser/data/tweets/filtered_tweets_aspect.csv',
+    '/Data/deeksha/concept_parser/data/news/filtered_sentences_aspect.csv'
 ]
 
 # Perform sentiment annotation for each CSV file
