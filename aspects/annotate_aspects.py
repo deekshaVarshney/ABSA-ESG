@@ -18,7 +18,7 @@ def annotate_tweets_with_aspect_terms(csv_files, aspect_terms_files):
         # Load the filtered tweets from the CSV file
         filtered_tweets_df = pd.read_csv(csv_file)
         print(filtered_tweets_df.columns)
-        
+        filtered_tweets_df = filtered_tweets_df.head(50)
         # Create empty column for aspect terms
         filtered_tweets_df['Aspect Terms'] = ""
         
@@ -36,7 +36,7 @@ def annotate_tweets_with_aspect_terms(csv_files, aspect_terms_files):
 
         
         # Save the annotated tweets to a new CSV file
-        annotated_tweets_file = f"aspect_{csv_file.split('/')[-1]}"
+        annotated_tweets_file = f"{csv_file.split('.')[0]}_aspect.csv"
         filtered_tweets_df.to_csv(annotated_tweets_file, index=False)
         print(f"Annotated tweets saved to: {annotated_tweets_file}")
 
